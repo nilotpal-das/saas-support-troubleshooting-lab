@@ -1,0 +1,23 @@
+info:
+  name: Update Ticket Title
+  type: http
+  seq: 3
+
+http:
+  method: PATCH
+  url: "{{base_url}}/posts/1"
+  body:
+    type: json
+    data: |
+      {
+        "title": "Resolved: Login Bowg",
+        "body": "Bow Wow!"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
